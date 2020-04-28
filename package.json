@@ -1,0 +1,19 @@
+{
+  "name": "sls-dev-api",
+  "version": "1.0.0",
+  "description": "sls dev api",
+  "scripts": {
+    "test": "jest",
+    "offline": "AWS_PROFILE=ps-master-develop sls offline start --region us-east-1"
+  },
+  "author": "RSC",
+  "devDependencies": {
+    "@types/lodash": "4.14.149",
+    "@types/node": "^13.7.7",
+    "aws-sdk": "^2.634.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "serverless-offline": "5.12.1"
+  }
+}

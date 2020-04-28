@@ -1,0 +1,28 @@
+service: sls-dev-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 512
+  timeout: 30
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: ${opt:region, self:custom.defaultRegion}
+  apiName: product-service
+
+plugins:
+  - serverless-offline
+
+custom:
+  defaultStage: develop
+  defaultRegion: us-east-1
+
+functions:
+
+  health-check:
+    handler: routes/healthCheckRoutes.handler
+    name: sls-dev-api-health-check
+    events:
+      - http:
+          method: GET
+          path: /health-check
+          cors: true
