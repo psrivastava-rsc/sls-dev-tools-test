@@ -8,4 +8,4 @@ tsc
 sls deploy -r us-east-1 -s develop
 ```
 
-![Img](https://prnt.sc/s7aehw)
+![Img](./doc.png)
